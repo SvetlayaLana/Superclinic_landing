@@ -14,6 +14,7 @@
 
 body{
   margin: 0;
+  background-color: #E5E5E5;
 }
 #content{
   max-width: 1440px;
@@ -29,9 +30,13 @@ header{
   height: $header-height;
   max-width: 1440px;
   top: 0;
+  z-index: 1;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
+  .row{
+    max-width: 1202px;
+    margin: 0 auto;
+  }
   p{
     margin-bottom: 0;
   }
@@ -85,50 +90,181 @@ header{
         margin-top: 27px;
         margin-bottom: 28px;
         margin-right: 23px;
-        &:last-child{
-          margin-right: 0;
-        }
         a:hover{
           text-decoration: none;
+          color: #219653;
         }
       }
     }
   }
 
-  div > button{
+  .btn.btn-primary{
     border: 1px solid $main-color;
     border-radius: 5px;
     background-color: transparent;
     @include font_setup(14px, 17px, $main-color, 'Lato');
     font-weight: bold;
     padding: 8px 11px;
+
+    &:hover, &:active, &:focus{
+      background-color: $main-color;
+      color: white;
+      box-shadow: none;
+    }
   }
 }
 
 #bg-img{
-  height: 530px;
+  height: 602px;
   background: url("../img/image 6.png");
   & > div{
-    width: 1051px;
+    max-width: 1051px;
     background: linear-gradient(85.96deg, rgba(255, 255, 255, 0) 7.73%, rgba(255, 255, 255, 0.9) 55.76%);
-    padding-right: 150px;
+    position: relative;
     & > div {
+      position: absolute;
+      top: 136px;
+      bottom: 233px;
+      right: 131px;
       p:first-child {
         @include font-setup(16px, 19px, $main-color, 'Lato');
+        margin-bottom: 8px;
       }
-
       p {
         @include font_setup(50px, 55px, black, 'PF Din Text Cond Pro');
+        margin-bottom: 64px;
       }
 
-      button {
+      .btn.btn-primary{
         background: $main-color;
         border: 1px solid $main-color;
         border-radius: 5px;
         @include font-setup(14px, 17px, white, 'Lato');
         font-weight: bold;
         padding: 8px 59px;
+
+        &:hover, &:active, &:focus{
+          background-color: transparent;
+          color: $main-color;
+          box-shadow: none;
+        }
       }
+    }
+  }
+}
+
+#info{
+  position: relative;
+  background-color: $main-color;
+  @include font_setup(14px, 16px, white, 'Karla');
+  //height: $header-height;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  div:first-child{
+      height: 24px;
+  }
+  div.row > div{
+    margin: ($header-height - 48px)/2 0;
+  }
+  hr{
+    border: 1px solid white;
+    width: 0;
+    height: 48px;
+    margin: 0 15px;
+    padding: 0;
+  }
+  a{
+    @include font_setup(14px, 16px, white, 'Karla');
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+#key-directions{
+  //position: relative;
+  background-color: white;
+  div.col-12 {
+    p{
+      &:first-child {
+        @include font_setup(14px, 17px, #C4C4C4, 'Lato');
+        height: 19px;
+        margin-top: 46px;
+        margin-bottom: 11px;
+      }
+      &:nth-child(2) {
+        @include font_setup(30px, 36px, black, 'Lato');
+        height: 39px;
+      }
+    }
+    #img-star{
+      background: url("../img/star.svg") center no-repeat;
+      height: 26px;
+      margin-top: 8px;
+      margin-bottom: 50px;
+    }
+  }
+  div.row:nth-child(2){
+    @include font_setup(16px, 19px, black, 'Lato');
+    div{
+      cursor: pointer;
+      &:hover{
+        color: $main-color;
+      }
+    }
+    hr{
+      width: 0;
+      height: 144px;
+      border: 1px solid $main-color;
+      margin: 0 0 81px;
+    }
+    img{
+      margin: 0 auto 40px;
+      height: 79px;
+    }
+  }
+  .marker{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 20px 0 20px;
+    border-color: white transparent transparent transparent;
+    position: relative;
+    top: 73px;
+    filter: drop-shadow(0 6px 3px rgba(0, 0, 0, 0.15));
+    margin: 0 auto;
+  }
+}
+
+#category-details{
+  padding-top: 47px;
+  padding-bottom: 47px;
+  background-color: #F6F6F6;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.25);
+  h3{
+    @include font_setup(18px, 22px, black, 'Lato');
+    font-weight: bold;
+    margin-bottom: 34px;
+  }
+  p{
+    margin: 0 0 8px;
+    @include font_setup(14px, 14px, black, 'HelveticaNeueCyr Light');
+    br{
+      display: block;
+      margin: 7px 0;
+    }
+  }
+  .btn.btn-primary{
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    background-color: transparent;
+    @include font_setup(14px, 17px, $main-color, 'Lato');
+    font-weight: bold;
+    padding: 13px 87px;
+
+    &:hover, &:active, &:focus{
+      background-color: $main-color;
+      color: white;
+      box-shadow: none;
     }
   }
 }
