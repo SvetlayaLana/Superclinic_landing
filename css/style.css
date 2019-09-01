@@ -87,7 +87,12 @@ header #header-description p:last-child {
   margin-bottom: 17px;
   height: 14px;
 }
-header nav ul {
+header #bars {
+  border: none;
+  margin: auto;
+  font-size: 24px;
+}
+header #navbar ul {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -97,14 +102,31 @@ header nav ul {
   margin-bottom: 0;
   padding-left: 0;
 }
-header nav ul li {
+header #navbar ul li {
   margin-top: 27px;
   margin-bottom: 28px;
   margin-right: 23px;
 }
-header nav ul li a:hover {
+@media screen and (max-width: 991.98px) {
+  header #navbar ul li:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  header #navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+header #navbar ul li a:hover {
   text-decoration: none;
   color: black;
+}
+@media screen and (max-width: 767.98px) {
+  header #navbar {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+  }
 }
 header .btn.btn-primary {
   border: 1px solid #2F80ED;
@@ -122,6 +144,11 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   color: white;
   box-shadow: none;
 }
+@media screen and (max-width: 440px) {
+  header .btn.btn-primary {
+    display: none;
+  }
+}
 
 #bg-img {
   height: 602px;
@@ -137,6 +164,11 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   top: 136px;
   bottom: 233px;
   right: 131px;
+}
+@media screen and (max-width: 1199.98px) {
+  #bg-img > div > div {
+    right: 30px;
+  }
 }
 #bg-img > div > div p:first-child {
   font-family: "Lato", sans-serif;
@@ -191,6 +223,17 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   margin: 0 15px;
   padding: 0;
 }
+@media screen and (max-width: 760px) {
+  #info hr {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  #info hr {
+    width: 50%;
+    height: 0;
+  }
+}
 #info a {
   font-family: "Karla", sans-serif;
   font-size: 14px;
@@ -204,7 +247,7 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
 #key-directions {
   background-color: white;
 }
-#key-directions div.col-12 p:first-child {
+#key-directions div.row:nth-child(1) p:first-child {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -213,14 +256,14 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   margin-top: 46px;
   margin-bottom: 11px;
 }
-#key-directions div.col-12 p:nth-child(2) {
+#key-directions div.row:nth-child(1) p:nth-child(2) {
   font-family: "Lato", sans-serif;
   font-size: 30px;
   line-height: 36px;
   color: black;
   height: 39px;
 }
-#key-directions div.col-12 #img-star {
+#key-directions div.row:nth-child(1) #img-star {
   background: url("../img/star.svg") center no-repeat;
   height: 26px;
   margin-top: 8px;
@@ -258,6 +301,11 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   top: 73px;
   filter: drop-shadow(0 6px 3px rgba(0, 0, 0, 0.15));
   margin: 0 auto;
+}
+@media screen and (max-width: 575.98px) {
+  #key-directions .marker {
+    display: none !important;
+  }
 }
 
 #category-details {
@@ -300,6 +348,11 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   background-color: #2F80ED;
   color: white;
   box-shadow: none;
+}
+@media screen and (max-width: 575.98px) {
+  #category-details .btn.btn-primary {
+    margin-bottom: 47px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

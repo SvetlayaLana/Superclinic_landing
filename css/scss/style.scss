@@ -79,7 +79,13 @@ header{
     }
   }
 
-  nav{
+  #bars{
+    border: none;
+    margin: auto;
+    font-size: 24px;
+  }
+
+  #navbar{
     ul{
       @include font_setup(14px, 17px, $main-color, 'Lato');
       font-weight: bold;
@@ -90,10 +96,27 @@ header{
         margin-top: 27px;
         margin-bottom: 28px;
         margin-right: 23px;
+        @media screen {
+          @media (max-width: 991.98px) {
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+          @media (max-width: 440px) {
+            width: 100%;
+            text-align: center;
+          }
+        }
         a:hover{
           text-decoration: none;
           color: black;
         }
+      }
+    }
+    @media screen {
+      @media (max-width: 767.98px) {
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
       }
     }
   }
@@ -111,7 +134,14 @@ header{
       color: white;
       box-shadow: none;
     }
+    @media screen {
+      @media (max-width: 440px) {
+        display: none;
+
+      }
+    }
   }
+
 }
 
 #bg-img{
@@ -126,6 +156,12 @@ header{
       top: 136px;
       bottom: 233px;
       right: 131px;
+      @media screen{
+        @media (max-width: 1199.98px) {
+          right: 30px;
+        }
+      }
+
       p:first-child {
         @include font-setup(16px, 19px, $main-color, 'Lato');
         margin-bottom: 8px;
@@ -171,6 +207,15 @@ header{
     height: 48px;
     margin: 0 15px;
     padding: 0;
+    @media screen{
+      @media (max-width: 760px) {
+        margin: 0;
+      }
+      @media (max-width: 575.98px) {
+        width: 50%;
+        height: 0;
+      }
+    }
   }
   a{
     @include font_setup(14px, 16px, white, 'Karla');
@@ -183,7 +228,7 @@ header{
 #key-directions{
   //position: relative;
   background-color: white;
-  div.col-12 {
+  div.row:nth-child(1) {
     p{
       &:first-child {
         @include font_setup(14px, 17px, #C4C4C4, 'Lato');
@@ -232,6 +277,11 @@ header{
     top: 73px;
     filter: drop-shadow(0 6px 3px rgba(0, 0, 0, 0.15));
     margin: 0 auto;
+    @media screen {
+      @media (max-width: 575.98px) {
+        display: none !important;
+      }
+    }
   }
 }
 
@@ -266,7 +316,13 @@ header{
       color: white;
       box-shadow: none;
     }
+    @media screen {
+      @media (max-width: 575.98px) {
+        margin-bottom: 47px;
+      }
+    }
   }
+
 }
 
 

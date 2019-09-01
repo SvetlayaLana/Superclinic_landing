@@ -1,3 +1,14 @@
+$('#bars').click(function () {
+   $('header').toggleClass('overflow-hidden');
+});
+
+$(document).mouseup(function (e) {
+    var bars = $("#bars");
+    if(!bars.is(e.target) && bars.has(e.target).length === 0 && window.innerWidth < 768){
+        $("header").addClass('overflow-hidden');
+    }
+});
+
 (function () {
     $('.marker').hide();
     $('#category-details').hide();
@@ -10,7 +21,7 @@ function toggleCategory(selector, title, imgSrc) {
         $(selector).removeClass('clicked-once');
         selectorCateg.slideUp();
     }else{
-        var arr = ['#neurology', '#massage', '#theumatology'];
+        var arr = ['#neurology', '#massage', '#rheumatology'];
         arr.forEach(function (element) {
             $(element).removeClass('clicked-once');
         });
@@ -38,4 +49,6 @@ $('#massage').click(function () {
 $('#rheumatology').click(function () {
     toggleCategory('#rheumatology', 'Ревматологія', 'img/image%205.png');
 });
+
+
 

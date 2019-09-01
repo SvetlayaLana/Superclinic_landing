@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Superclinic</title>
 </head>
 <body>
 <div id="content">
-    <header class="container">
+    <header class="container overflow-hidden">
         <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <div id="header-logo" class="align-self-center">
+            <div class="col col-md-4 d-flex justify-content-center order-0">
+                <div id="header-logo" class="d-none d-sm-block align-self-center">
                     <img src="img/logo/Vector-1.svg" alt="">
                     <img src="img/logo/Vector-2.svg" alt="">
                     <img src="img/logo/Vector-3.svg" alt="">
@@ -24,15 +25,18 @@
                     <p>Насолодись свободою руху</p>
                 </div>
             </div>
-            <nav class="col-5">
-                <ul class="d-flex justify-content-end text-uppercase">
+            <button class="btn btn-primary d-block d-md-none col-auto order-2" id="bars">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="col-12 col-md-5 order-3 order-md-1" id="navbar">
+                <ul class="d-flex justify-content-around justify-content-md-end text-uppercase flex-wrap flex-sm-nowrap">
                     <li><a href="#">Переваги</a></li>
                     <li><a href="#">Ціни</a></li>
                     <li><a href="#">Лікування</a></li>
                     <li><a href="#">Контакти</a></li>
                 </ul>
             </nav>
-            <div class="col-3 d-flex justify-content-end align-items-center">
+            <div class="col col-md-3 d-flex justify-content-center justify-content-md-end align-items-center order-1 order-md-2">
                 <button class="btn btn-primary text-uppercase">Записатись на прийом</button>
             </div>
         </div>
@@ -50,16 +54,16 @@
 
     <section class="container justify-content-center h-auto" id="info">
         <div class="row h-100 align-items-center justify-content-center">
-            <div class="col-4 text-center">
+            <div class="col-12 col-sm-4 text-center">
                 <a href="https://goo.gl/maps/11z5DEqNp3eugvWW9" target="_blank">м. Київ, вул. Еленівська, 8</a>
             </div>
             <hr class="col-auto ">
-            <div class="col-3 text-center"><a href="tel:0952222222">(095) 222 22 22</a><br>
+            <div class="col-12 col-sm-3 text-center"><a href="tel:0952222222">(095) 222 22 22</a><br>
                 <a href="tel:0682222222">(068) 222 22 22</a><br>
                 <a href="tel:0632222222">(063) 222 22 22</a>
             </div>
             <hr class="col-auto">
-            <div class="col-4 text-center">
+            <div class="col-12 col-sm-4 text-center">
                 <a href="mailto:info@clinic.com">
                 info@clinic.com
                 </a>
@@ -77,19 +81,19 @@
         </div>
 
         <div class="row text-uppercase text-center justify-content-center">
-            <div class="col-3" id="neurology">
+            <div class="col-12 col-sm col-lg-3" id="neurology">
                 <img src="img/Human%20Brain.svg" class="d-block" alt="human brain">
                 <p>Неврологія</p>
                 <div class="marker"></div>
             </div>
-            <hr>
-            <div class="col-3" id="massage">
+            <hr class="d-none d-sm-block">
+            <div class="col-12 col-sm col-lg-3" id="massage">
                 <img src="img/helthcare.svg" class="d-block" alt="healthcare">
                 <p>Массаж</p>
                 <div class="marker"></div>
             </div>
-            <hr>
-            <div class="col-3" id="rheumatology">
+            <hr class="d-none d-sm-block">
+            <div class="col-12 col-sm col-lg-3" id="rheumatology">
                 <img src="img/joint.svg" class="d-block" alt="joint">
                 <p>Ревматологія</p>
                 <div class="marker"></div>
@@ -99,7 +103,7 @@
 
     <section id="category-details" class="container">
         <div class="row justify-content-around">
-            <div class="col-4 m-auto">
+            <div class="col-10 col-sm-5 col-lg-4 m-auto">
                 <h3 class="text-uppercase" id="title"></h3>
                 <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -114,7 +118,7 @@
                 </p>
                 <button class="btn btn-primary">Деталі</button>
             </div>
-            <div class="col-4 m-auto">
+            <div class="col-10 col-sm-5 col-lg-4 m-auto" id="img-cg">
                 <img class="img-fluid" id="category-img" src="" alt="neurology">
             </div>
         </div>
