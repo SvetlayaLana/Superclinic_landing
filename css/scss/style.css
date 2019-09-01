@@ -104,7 +104,7 @@ header nav ul li {
 }
 header nav ul li a:hover {
   text-decoration: none;
-  color: #219653;
+  color: black;
 }
 header .btn.btn-primary {
   border: 1px solid #2F80ED;
