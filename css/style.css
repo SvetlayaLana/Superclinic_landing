@@ -19,4 +19,132 @@ body {
   margin: 0;
 }
 
+#content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+header {
+  position: absolute;
+  height: 72px;
+  max-width: 1440px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+header p {
+  margin-bottom: 0;
+}
+header #header-logo {
+  position: relative;
+  width: 58px;
+  height: 58px;
+}
+header #header-logo img {
+  position: absolute;
+}
+header #header-logo img[src="img/logo/Vector.svg"] {
+  top: 0;
+  left: 5px;
+}
+header #header-logo img[src="img/logo/Vector-3.svg"] {
+  top: 25px;
+  left: 22px;
+}
+header #header-logo img[src="img/logo/Vector-1.svg"] {
+  bottom: 0;
+  right: 0;
+}
+header #header-logo img[src="img/logo/Vector-2.svg"] {
+  bottom: 0;
+  left: 0;
+}
+header #header-description {
+  margin-left: 3px;
+}
+header #header-description p:first-child {
+  font-family: "HelveticaNeueCyr Bold", sans-serif;
+  font-size: 25px;
+  line-height: 25px;
+  color: #2F80ED;
+  margin-top: 16px;
+}
+header #header-description p:last-child {
+  font-family: "HelveticaNeueCyr Light", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #219653;
+  margin-bottom: 17px;
+  height: 14px;
+}
+header nav ul {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2F80ED;
+  font-weight: bold;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+header nav ul li {
+  margin-top: 27px;
+  margin-bottom: 28px;
+  margin-right: 23px;
+}
+header nav ul li:last-child {
+  margin-right: 0;
+}
+header nav ul li a:hover {
+  text-decoration: none;
+}
+header div > button {
+  border: 1px solid #2F80ED;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2F80ED;
+  font-weight: bold;
+  padding: 8px 11px;
+}
+
+#bg-img {
+  height: 530px;
+  background: url("../img/image 6.png");
+}
+#bg-img > div {
+  width: 1051px;
+  background: linear-gradient(85.96deg, rgba(255, 255, 255, 0) 7.73%, rgba(255, 255, 255, 0.9) 55.76%);
+  padding-right: 150px;
+}
+#bg-img > div > div p:first-child {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2F80ED;
+}
+#bg-img > div > div p {
+  font-family: "PF Din Text Cond Pro", sans-serif;
+  font-size: 50px;
+  line-height: 55px;
+  color: black;
+}
+#bg-img > div > div button {
+  background: #2F80ED;
+  border: 1px solid #2F80ED;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: white;
+  font-weight: bold;
+  padding: 8px 59px;
+}
+
 /*# sourceMappingURL=style.css.map */
