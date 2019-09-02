@@ -33,9 +33,18 @@ header{
   z-index: 1;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  &.container{
+    @media screen {
+      @media (max-width: 767.98px) {
+        background: rgba(255, 255, 255, 0.9);
+        height: auto;
+      }
+    }
+  }
   .row{
     max-width: 1202px;
     margin: 0 auto;
+
   }
   p{
     margin-bottom: 0;
@@ -77,6 +86,14 @@ header{
       margin-bottom: 17px;
       height: 14px;
     }
+    @media screen and (max-width: 860px) and (min-width: 768px){
+      p:first-child{
+        font-size: 20px;
+      }
+      p:last-child{
+        font-size: 10px;
+      }
+    }
   }
 
   #bars{
@@ -102,6 +119,9 @@ header{
               margin-right: 0;
             }
           }
+          @media (max-width: 860px) and (min-width: 768px){
+            margin-right: 15px;
+          }
           @media (max-width: 440px) {
             width: 100%;
             text-align: center;
@@ -114,9 +134,8 @@ header{
       }
     }
     @media screen {
-      @media (max-width: 767.98px) {
-        background: rgba(255, 255, 255, 0.9);
-        width: 100%;
+      @media (max-width: 860px) and (min-width: 768px){
+        margin-right: -15px;
       }
     }
   }
@@ -129,15 +148,17 @@ header{
     font-weight: bold;
     padding: 8px 11px;
 
-    &:hover, &:active, &:focus{
+    &:hover, &:active{
       background-color: $main-color;
       color: white;
+      box-shadow: none;
+    }
+    &:focus{
       box-shadow: none;
     }
     @media screen {
       @media (max-width: 440px) {
         display: none;
-
       }
     }
   }
@@ -179,9 +200,12 @@ header{
         font-weight: bold;
         padding: 8px 59px;
 
-        &:hover, &:active, &:focus{
+        &:hover, &:active{
           background-color: transparent;
           color: $main-color;
+          box-shadow: none;
+        }
+        &:focus{
           box-shadow: none;
         }
       }
@@ -311,9 +335,12 @@ header{
     font-weight: bold;
     padding: 13px 87px;
 
-    &:hover, &:active, &:focus{
+    &:hover, &:active{
       background-color: $main-color;
       color: white;
+      box-shadow: none;
+    }
+    &:focus{
       box-shadow: none;
     }
     @media screen {

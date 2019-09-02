@@ -1,11 +1,11 @@
 $('#bars').click(function () {
-   $('header').toggleClass('overflow-hidden');
+   $('#navbar').toggleClass('d-none');
 });
 
 $(document).mouseup(function (e) {
     var bars = $("#bars");
     if(!bars.is(e.target) && bars.has(e.target).length === 0 && window.innerWidth < 768){
-        $("header").addClass('overflow-hidden');
+        $("#navbar").addClass('d-none');
     }
 });
 

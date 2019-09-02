@@ -38,6 +38,12 @@ header {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
+@media screen and (max-width: 767.98px) {
+  header.container {
+    background: rgba(255, 255, 255, 0.9);
+    height: auto;
+  }
+}
 header .row {
   max-width: 1202px;
   margin: 0 auto;
@@ -87,6 +93,14 @@ header #header-description p:last-child {
   margin-bottom: 17px;
   height: 14px;
 }
+@media screen and (max-width: 860px) and (min-width: 768px) {
+  header #header-description p:first-child {
+    font-size: 20px;
+  }
+  header #header-description p:last-child {
+    font-size: 10px;
+  }
+}
 header #bars {
   border: none;
   margin: auto;
@@ -112,6 +126,11 @@ header #navbar ul li {
     margin-right: 0;
   }
 }
+@media screen and (max-width: 860px) and (min-width: 768px) {
+  header #navbar ul li {
+    margin-right: 15px;
+  }
+}
 @media screen and (max-width: 440px) {
   header #navbar ul li {
     width: 100%;
@@ -122,10 +141,9 @@ header #navbar ul li a:hover {
   text-decoration: none;
   color: black;
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 860px) and (min-width: 768px) {
   header #navbar {
-    background: rgba(255, 255, 255, 0.9);
-    width: 100%;
+    margin-right: -15px;
   }
 }
 header .btn.btn-primary {
@@ -139,9 +157,12 @@ header .btn.btn-primary {
   font-weight: bold;
   padding: 8px 11px;
 }
-header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-primary:focus {
+header .btn.btn-primary:hover, header .btn.btn-primary:active {
   background-color: #2F80ED;
   color: white;
+  box-shadow: none;
+}
+header .btn.btn-primary:focus {
   box-shadow: none;
 }
 @media screen and (max-width: 440px) {
@@ -195,9 +216,12 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   font-weight: bold;
   padding: 8px 59px;
 }
-#bg-img > div > div .btn.btn-primary:hover, #bg-img > div > div .btn.btn-primary:active, #bg-img > div > div .btn.btn-primary:focus {
+#bg-img > div > div .btn.btn-primary:hover, #bg-img > div > div .btn.btn-primary:active {
   background-color: transparent;
   color: #2F80ED;
+  box-shadow: none;
+}
+#bg-img > div > div .btn.btn-primary:focus {
   box-shadow: none;
 }
 
@@ -344,9 +368,12 @@ header .btn.btn-primary:hover, header .btn.btn-primary:active, header .btn.btn-p
   font-weight: bold;
   padding: 13px 87px;
 }
-#category-details .btn.btn-primary:hover, #category-details .btn.btn-primary:active, #category-details .btn.btn-primary:focus {
+#category-details .btn.btn-primary:hover, #category-details .btn.btn-primary:active {
   background-color: #2F80ED;
   color: white;
+  box-shadow: none;
+}
+#category-details .btn.btn-primary:focus {
   box-shadow: none;
 }
 @media screen and (max-width: 575.98px) {
